@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sopa de Letras</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+    <script language="javascript" type="text/javascript" src="jquery.min.js"></script> 
+    <script type="text/javascript" src="wordfind.js"></script> 
+    <script type="text/javascript" src="wordfindgame.js"></script>  
+</head>
+
+<body>
+	<p id="contador">0</p>
+	<p id="restantes">0</p>
+	<div id='juego'></div>
+	<div id='Palabras'></div>
+
+	<div><button id='respuesta'>Resolver</button></div>
+
+
+<script>
+var text = '{"data":[{"ID":"1","Palabra":"gato"},{"ID":"2","Palabra":"seor"},{"ID":"3","Palabra":"interactividades"},{"ID":"4","Palabra":"goma"}]}';
+
+obj = JSON.parse(text);
+
+var words = ['Prueba1', 'prueba2','prueba3','prueba4','Prueba5', 'prueba6','prueba7','prueba8m', 'prueba9', 'prueba10'];
+
+var words2= [];
+
+
+for (var i = 0; i < obj.data.length; i++) {
+	words2.push([obj.data[i].Palabra]);
+
+}
+
+console.log(words2);
+console.log(words);
+
+
+		var gamePuzzle = wordfindgame.create(words,'#juego','#Palabras');
+
+		var puzzle= wordfind.newPuzzle(words,{heigth:18,width:18,fillBlanks: false});
+		wordfind.print(puzzle);
+
+		$('#respuesta').click( function() {wordfindgame.solve(gamePuzzle, words);});
+
+var x = document.getElementsByClassName("word");
+console.log(x)
+</script>
+
+</body>
+</html>

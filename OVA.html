@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+	<title>Relacionar</title>
+
+	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
+	    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+	<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+	
+    <script src="bootstrap/bootstrap2/jquery.min.js"></script>
+  <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
+  <script type="text/javascript" src="js/modal/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/base.css">
+        <!--Botones -->
+  <link rel="stylesheet" href="css/boton3d.css"> 
+  <link rel="stylesheet" href="css/relacionar.css">
+
+
+
+  <script type="text/javascript" src="js/json.json"></script>
+  <script type="text/javascript" src="js/relacionar.js"></script>
+
+
+</head>
+
+<style type="text/css">
+  
+@media only screen and (max-width: 600px){
+  .myButton4{
+    margin-bottom: 0%;
+    margin-left: 30%;
+  }
+
+  .myButton2{
+    margin-bottom: 0%;
+    margin-right: 35%;
+  }
+</style>
+
+<body onload="inicio();" style="background-image: url(assets/FONDO.png); background-size: cover;background-repeat: no-repeat; background-color: #FBFDFD">
+    <!--Barra de Título -->
+    <div id="barra_titulo" class="titulo_barra">
+        <h1 class="titulo">HISTORIA</h1>
+ </div>
+ <!--Barra de Subtítulo -->
+ <div id="barra_subtitulo" class="subtitulo_barra">        
+        <p class="subtitulo">Relacionar</p>
+ </div>
+<div class="contenedor">
+    <div class="subtitulo_barra4">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                <div class="subtitulo_barra4" style="font-size: 1.6vw;">
+                  <p class="subtitulo_barra4">Selecciona la respuesta correcta a la pregunta correspondiente</p>
+                </div>
+
+             </div>
+        </div>
+    </div>
+    <div class="row" style="position: relative;">
+        <div style="margin-top: 25px;"></div>
+        
+    </div>
+    <div class="row" style="position: relative;">
+        <div class="col-md-12 col-lg-12 col-sm-12 row " >
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 row scrollbar-primary">
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <center><div id="preguntas"></div></center>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <center><div id="respuestas"></div></center>
+                    </div>
+
+                </div>
+               
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <input type="hidden" name="" id='aux_respuesta'/> <input type="hidden" name="" id='aux_pregunta'> <input type="hidden" name="" id='aux_color1'>
+                    <input type="hidden" name="" id='aux_color2'>
+                    
+                </div>
+                <br>
+                <br>                   
+        </div>
+    </div>
+</div>
+
+
+    <br>
+
+    <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: end;">
+              <button type="button" id="calcular" class="myButton2" onclick="calcular();">Evaluar</button>
+        </div>
+         
+         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+             <button type="button" id="limpiar" class="myButton4"  onclick="inicio();">Limpiar</button>
+        </div>
+        
+                               
+            
+    </div>
+
+
+      <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+     
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-weight: bold;">Resultados</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <br>
+          <center><img src="" alt="" id="procentaje" width="20%" style="font-size: 1.4vw; color: black"></center>
+          <br>
+          <br>
+         
+          <center><p id="promedio" style="color: black;">Promedio</p></center>
+          
+        </div>
+        <div class="modal-footer" style="margin-left: auto;margin-right: auto;">
+          
+          <button type="button" class="myButton3" data-dismiss="modal" style="border: 0px;">Aceptar</button>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>¡Bienvenido!</title>
+
+	  <!--Bootstrap -->
+  <link rel="stylesheet" href="bootstrap/bootstrap3.4.1.css">
+  
+  
+
+    
+    		<!--Estilos -->
+	<link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style-texto.css">
+    <link
+    rel="stylesheet" href="css/animate.min.css"
+  />
+    
+       		<!--Botones -->
+	<link rel="stylesheet" href="css/boton3d.css">
+
+	<style type="text/css">
+        html, body{
+        display: flex;
+        flex-direction: column;
+        height:100vh;
+        background-image: url(assets/FONDO.png); background-size: cover;background-repeat: no-repeat; background-color: #FBFDFD
+            
+        }
+        .img{
+            width: 100%;
+            height: 50%;
+           padding-bottom: 3vh;
+        }
+        
+        .svg:hover{
+             -webkit-transform:  scale(1.3) rotate3d(1, 1, 1, 25deg); /* Chrome, Safari, Opera */
+            transform: scale(1.3) rotate3d(1, 1, 1, 25deg);
+        }
+        .padre 
+        {
+            padding-top: 3vh;
+           height:100%;
+           width: 100%;         
+           display:flex;
+           justify-content: center;
+           align-items: center;
+        }
+
+        .Alfabeto {
+            height:100%;
+            flex: 1;        
+        }
+       
+        
+        h3{
+            font-family:'sequel_sanssemi_bold_head';"
+            text-align:justify-all;
+           
+        }
+        .myButton {
+       box-shadow: 0px 10px 14px -7px #00B6ED;
+     background:linear-gradient(to bottom, #00B6ED 10%, #00B6ED 100%);
+     background-color:#599bb3;
+     border-radius:9px;
+     display:inline-block;
+     cursor:pointer;
+     color:#ffffff;
+  
+     font-size:1.5em;
+     font-weight:bolder;
+     padding:13px 32px;
+     text-decoration:none;
+     text-shadow:0px 1px 0px #3d768a;
+        text-align: center;
+            padding-top: 2vh;
+}
+        .myButton:hover{
+            box-shadow: 0px 10px 14px -7px #276873;
+            background:linear-gradient(to bottom, #00EDC4 10%, #00EDC4 100%);
+                 background-color:rgb(0,237,196);
+           
+        }
+.myButton:active {
+    position:relative;
+  top:1px;
+}
+	</style>
+
+</head>
+<body style="position:relative;">
+ 
+    
+	<div id="barra_titulo" class="titulo_barra">
+	   	<h1 class="titulo">HISTORIA</h1>
+	</div>
+	<div id="barra_subtitulo" class="subtitulo_barra">
+
+  <div class="subtitulo">
+            Relacionar
+  </div>
+  
+</div>
+	</div>
+
+	<!--INGRESA AQUÍ EL CONTENIDO -->
+	<div class="row" style="position: relative;	margin-right:0 ">
+		<div style="margin-top: 20px;"></div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+            
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" style="align-items: center;text-align: center;" > 
+                   <p class="animate__animated animate__backInDown" style="font-size: 1.8vw;color:#212529;font-weight: bold; padding-top: 2.7vw;">Relaciona las definiciones de acuerdo con las imágenes.</p>
+                
+                    <br>
+		   		<a href="Instrucciones.html" style="color: #fff; text-decoration: none;" class="myButton">Comenzar</a>
+                    <br>                    <br>
+
+                    <img class="imagen" style="width: 55%; margin-top: 5vh; opacity: 0.5;" src="assets/undraw_welcoming_xvuq.svg" alt="" />
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="padre">                
+                
+                <!--ALFABETO -->
+                <div class="Alfabeto">
+                <div class="row" >
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 letters"> 
+                       <img class="imagen" src="assets/relacionar.png" style="width: 70%;" /> 
+                      <!-- <img class="gif" src="assets/relacionar.png" width="600" height="450" alt=""> -->
+                    </div>
+                    
+                </div>
+                      
+                </div>
+                </div>
+            </div>
+        </div>
+		
+
+		<div class="col-md-12" style="position: relative;">
+			
+			<div class="col-md-12" style="position: relative; z-index: -1; top: -20px;">
+				
+			</div>
+		</div>
+	</div>
+	<!--FIN DEL CONTENIDO -->
+</body>
+</html>
